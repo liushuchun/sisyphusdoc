@@ -1,0 +1,1345 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>认证 | Qiniu MIX Service</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./auth_header.html" />
+    
+    
+    <link rel="prev" href="./response.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.3"
+        data-chapter-title="认证"
+        data-filepath="authentication.md"
+        data-basepath="."
+        data-revision="Wed Sep 14 2016 10:32:45 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Qiniu MIX Service
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="intro.html">
+            
+                
+                    <a href="./intro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        简介
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="guide.html">
+            
+                
+                    <a href="./guide.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        快速开始
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="guide_qiniu.html">
+            
+                
+                    <a href="./guide_qiniu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        七牛云内部迁移
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="guide_qiniu_upload.html">
+            
+                
+                    <a href="./guide_qiniu_upload.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        上传迁移
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="guide_qiniu_mirror.html">
+            
+                
+                    <a href="./guide_qiniu_mirror.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                        镜像迁移
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="guide_qiniu_line.html">
+            
+                
+                    <a href="./guide_qiniu_line.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.3.</b>
+                        
+                        冷存储迁移
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="guide_qiniu_disaster.html">
+            
+                
+                    <a href="./guide_qiniu_disaster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.4.</b>
+                        
+                        异地灾备迁移
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+            <span><b>1.3.</b> 迁移至七牛云</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="guide_oss.html">
+            
+                
+                    <a href="./guide_oss.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        阿里云 (OSS) 迁移
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="guide_s3.html">
+            
+                
+                    <a href="./guide_s3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        亚马逊 (S3) 迁移
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="guide_urls.html">
+            
+                
+                    <a href="./guide_urls.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.3.</b>
+                        
+                        URLs 资源列表迁移
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> API</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="request.html">
+            
+                
+                    <a href="./request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        请求头
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="response.html">
+            
+                
+                    <a href="./response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        响应头
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="authentication.html">
+            
+                
+                    <a href="./authentication.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        认证
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="auth_header.html">
+            
+                
+                    <a href="./auth_header.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        Header 认证
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="auth_query.html">
+            
+                
+                    <a href="./auth_query.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                        URL 参数认证
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="auth_chunked.html">
+            
+                
+                    <a href="./auth_chunked.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.3.</b>
+                        
+                        Chunked 认证
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+            <span><b>2.4.</b> Service API</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="service_get.html">
+            
+                
+                    <a href="./service_get.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        获取服务列表 (List Services)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="scheduler.html">
+            
+                
+                    <a href="./scheduler.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Scheduler API
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="scheduler_post.html">
+            
+                
+                    <a href="./scheduler_post.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.1.</b>
+                        
+                        分发迁移任务 (POST Scheduler)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="scheduler_get.html">
+            
+                
+                    <a href="./scheduler_get.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.2.</b>
+                        
+                        获取迁移任务 (GET Scheduler)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="scheduler_pause.html">
+            
+                
+                    <a href="./scheduler_pause.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.3.</b>
+                        
+                        暂停迁移任务 (POST Scheduler)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="scheduler_resume.html">
+            
+                
+                    <a href="./scheduler_resume.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.4.</b>
+                        
+                        恢复迁移任务 (POST Scheduler)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="scheduler_delete.html">
+            
+                
+                    <a href="./scheduler_delete.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.5.</b>
+                        
+                        删除迁移任务 (DELETE Scheduler)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="worker.html">
+            
+                
+                    <a href="./worker.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Worker API
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="worker_post.html">
+            
+                
+                    <a href="./worker_post.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.1.</b>
+                        
+                        启动处理器 (POST Worker)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="worker_stats.html">
+            
+                
+                    <a href="./worker_stats.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.2.</b>
+                        
+                        更新处理器状态 (PATCH Worker)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="transfer.html">
+            
+                
+                    <a href="./transfer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Transfer API
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" >
+            
+            <span><b>2.7.1.</b> 对外 API</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1.1" data-path="transfer_put.html">
+            
+                
+                    <a href="./transfer_put.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.1.</b>
+                        
+                        新建迁移 (PUT Transfer)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.1.2" data-path="transfer_head.html">
+            
+                
+                    <a href="./transfer_head.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.2.</b>
+                        
+                        检查迁移 (HEAD Transfer)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.1.3" data-path="transfer_get.html">
+            
+                
+                    <a href="./transfer_get.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.3.</b>
+                        
+                        获取迁移 (GET Transfer)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.1.4" data-path="transfer_patch.html">
+            
+                
+                    <a href="./transfer_patch.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.4.</b>
+                        
+                        更新迁移 (PATCH Transfer)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.1.5" data-path="transfer_pause.html">
+            
+                
+                    <a href="./transfer_pause.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.5.</b>
+                        
+                        暂停迁移 (POST Transfer)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.1.6" data-path="transfer_resume.html">
+            
+                
+                    <a href="./transfer_resume.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.6.</b>
+                        
+                        恢复迁移 (POST Transfer)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.1.7" data-path="transfer_cancel.html">
+            
+                
+                    <a href="./transfer_cancel.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.7.</b>
+                        
+                        关闭迁移 (POST Transfer)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.1.8" data-path="transfer_delete.html">
+            
+                
+                    <a href="./transfer_delete.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.8.</b>
+                        
+                        删除迁移 (DELETE Transfer)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2" >
+            
+            <span><b>2.7.2.</b> 对内 API</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.2.1" data-path="scheduler_put.html">
+            
+                
+                    <a href="./scheduler_put.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.2.1.</b>
+                        
+                        注册调度器 (PUT Scheduler)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2.2" data-path="scheduler_status.html">
+            
+                
+                    <a href="./scheduler_status.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.2.2.</b>
+                        
+                        同步调度器状态 (POST Scheduler)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2.3" data-path="scheduler_restart.html">
+            
+            <span><b>2.7.2.3.</b> 注销调度器 (POST Scheduler)</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="upload.html">
+            
+                
+                    <a href="./upload.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        Upload API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="mirror.html">
+            
+                
+                    <a href="./mirror.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        Mirror API
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> 安装部署</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="nsq_config.html">
+            
+                
+                    <a href="./nsq_config.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        消息队列NSQ部署
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="api_router.html">
+            
+            <span><b>3.2.</b> API router部署</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="scheduler_deploy.html">
+            
+            <span><b>3.3.</b> Scheduler部署</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="worker_deploy.html">
+            
+            <span><b>3.4.</b> Worker部署</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="qws_sdk.html">
+            
+            <span><b>4.</b> SDK</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="aqs_sdk_java.html">
+            
+            <span><b>4.1.</b> Java</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="qws_sdk_go.html">
+            
+            <span><b>4.2.</b> Golang</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="qws_sdk_net.html">
+            
+            <span><b>4.3.</b> .NET</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="qws_sdk_ruby.html">
+            
+            <span><b>4.4.</b> Ruby</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="qws_sdk_python.html">
+            
+            <span><b>4.5.</b> Python</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="errors.html">
+            
+                
+                    <a href="./errors.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        错误定义
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> 参考资料</span>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Qiniu MIX Service</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h3 id="&#x8BF7;&#x6C42;&#x8BA4;&#x8BC1;-authentication">&#x8BF7;&#x6C42;&#x8BA4;&#x8BC1; (Authentication)</h3>
+<p>Qiniu MIX Service &#x670D;&#x52A1;&#x540C;&#x65F6;&#x652F;&#x6301; QWS V4 &#x548C; QWS V2 &#x8BF7;&#x6C42;&#x7B7E;&#x540D;&#x8BA4;&#x8BC1;&#xFF0C;&#x63A8;&#x8350;&#x4F18;&#x5148;&#x9009;&#x62E9;&#x5177;&#x6709;&#x66F4;&#x9AD8;&#x5B89;&#x5168;&#x6027;&#x7684; QWS V4 &#x7B7E;&#x540D;&#x8BA4;&#x8BC1;&#xFF01;</p>
+<h4 id="&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;">&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;</h4>
+<ul>
+<li><p><strong>HTTP &#x8BA4;&#x8BC1;&#x5934; (HTTP Authorization Header)</strong></p>
+<p>  Qiniu MIX Service &#x670D;&#x52A1;&#x652F;&#x6301;&#x57FA;&#x4E8E; HTTP Authorization Header &#x7684;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#x3002;</p>
+</li>
+<li><p><strong>HTTP &#x8BF7;&#x6C42;&#x53C2;&#x6570; (HTTP Query String)</strong></p>
+<p>  Qiniu MIX Service &#x670D;&#x52A1;&#x652F;&#x6301;&#x57FA;&#x4E8E; HTTP Query String &#x7684;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#x3002;</p>
+</li>
+</ul>
+<h4 id="&#x8BA4;&#x8BC1;&#x7B7E;&#x540D;-v4">&#x8BA4;&#x8BC1;&#x7B7E;&#x540D; V4</h4>
+<pre><code>CanonicalizedURI = [ &quot;/&quot; ] +
+    &lt;HTTP-Request-URI, from the protocol name up to the query string&gt;
+
+CanonicalizedQueryString = URI-Encoding(&lt;QueryParameter1&gt;) + &quot;=&quot; + URI-Encoding(&lt;Value1&gt;) +
+    &quot;&amp;&quot; + URI-Encoding(&lt;QueryParameter2&gt;) + &quot;=&quot; + URI-Encoding(&lt;Value2&gt;) +
+    ...
+    &quot;&amp;&quot; + URI-Encoding(&lt;QueryParameterN&gt;) + &quot;=&quot; + URI-Encoding(&lt;ValueN&gt;)
+
+CanonicalizedHeaders = Lowercase(&lt;HeaderName1&gt;) + &quot;:&quot; + TrimSpace(&lt;Value1&gt;) + &quot;\n&quot;
+    Lowercase(&lt;HeaderName2&gt;) + &quot;:&quot; + TrimSpace(&lt;Value2&gt;) + &quot;\n&quot;
+    ...
+    Lowercase(&lt;HeaderNameN&gt;) + &quot;:&quot; + TrimSpace(&lt;ValueN&gt;) + &quot;\n&quot;
+
+SignedHeaders = Lowercase(&lt;HeaderName1&gt;) + &quot;;&quot; + Lowercase(&lt;HeaderName2&gt;) + &quot;;&quot; + ... + &quot;;&quot; + Lowercase(&lt;HeaderNameN&gt;)
+
+HashedPayload = Hex(HMAC-SHA256(&lt;Playload&gt;))
+
+CanonicalizedRequest = HTTP-Verb + &quot;\n&quot; +
+    CanonicalizedURI + &quot;\n&quot; +
+    CanonicalizedQueryString + &quot;\n&quot; +
+    CanonicalizedHeaders + &quot;\n&quot; +
+    SignedHeaders + &quot;\n&quot; +
+    HashedPayload
+
+CanonicalizedTimestamp = ISO8601(...)
+
+CanonicalizedScope = &lt;yyyymmdd&gt;/&lt;region&gt;/&lt;service&gt;/qws4_request
+
+StringToSign = QWS4-HMAC-SHA256 + &quot;\n&quot; +
+    CanonicalizedTimestamp + &quot;\n&quot; +
+    CanonicalizedScope + &quot;\n&quot; +
+    Hex(HMAC-SHA256(CanonicalizedRequest))
+
+SigningKey = HMAC-SHA256(&quot;QWS4&quot; + &quot;&lt;AccessKeySecret&gt;&quot;, &quot;&lt;yyyymmdd&gt;&quot;)
+SigningKey = HMAC-SHA256(SigningKey, &quot;&lt;region&gt;&quot;)
+SigningKey = HMAC-SHA256(SigningKey, &quot;&lt;service&gt;&quot;)
+SigningKey = HMAC-SHA256(SigningKey, &quot;qws4_request&quot;)
+
+Signature = HMAC-SHA256(SigningKey, UTF8-Encoding-Of(StringToSign))
+
+Authorization = &quot;QWS4-HMAC-SHA256&quot; + &quot; &quot; +
+    &quot;Credential=&lt;AccessKeyId&gt;/&lt;CanonicalizedScope&gt;&quot; + &quot;,&quot; +
+    &quot;SignedHeaders=&lt;SignedHeaders&gt;&quot; + &quot;,&quot; +
+    &quot;Signature=&lt;Signature&gt;&quot;
+</code></pre><h5 id="qws-v4-&#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x7684;&#x89C4;&#x5219;&#x5316;&#x6D41;&#x7A0B;">QWS V4 &#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x7684;&#x89C4;&#x5219;&#x5316;&#x6D41;&#x7A0B;</h5>
+<ul>
+<li><p>&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42; URI (CanonicalizedURI)</p>
+<ul>
+<li><p>&#x4EE5;&#x7A7A;&#x5B57;&#x7B26;&#x5F00;&#x59CB; <code>CanonicalizedURI = &quot;&quot;</code></p>
+</li>
+<li><p>&#x5C06;&#x8BF7;&#x6C42;&#x4E2D;&#x7684; <em>HTTP Request-URI</em> &#x6DFB;&#x52A0;&#x5230;&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42; URI &#x4E2D; <code>CanonicalizedURI += &quot;/applicate&quot;</code></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;: &#x5BF9;&#x4E8E;&#x83B7;&#x53D6;&#x4EFB;&#x52A1;&#x5217;&#x8868; (<em>List Jobs</em>) &#x8BF7;&#x6C42;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0; &quot;/&quot; &#x5230;&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42; URI &#x4E2D; <code>CanonicalizedURI += &quot;/&quot;</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x67E5;&#x8BE2;&#x5B57;&#x4E32; (CanonicalizedQueryString)</p>
+<ul>
+<li><p>&#x5C06;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684; Keys &#x548C; Values &#x4F7F;&#x7528; URI-Encoding &#x7F16;&#x7801;</p>
+</li>
+<li><p>&#x5C06; URI-Encoding &#x7F16;&#x7801;&#x540E;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684; Keys &#x6309;&#x5B57;&#x6BCD;&#x5E8F;&#x6392;&#x5E8F;</p>
+</li>
+<li><p>&#x7528;&#x82F1;&#x6587;&#x7B49;&#x53F7; <code>=</code> &#x5C06;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x5BF9;&#x8FDE;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x4E32;&#xFF0C;&#x5982; <code>URI-Encoding(Key) + &quot;=&quot; + URI-Encoding(Value)</code></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;: &#x5982;&#x679C;&#x8BF7;&#x6C42;&#x53C2;&#x6570; Key &#x5BF9;&#x5E94;&#x7684;&#x503C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x7528;&#x7A7A;&#x5B57;&#x4E32;&#x4EE3;&#x66FF;&#xFF0C;&#x5982; <code>GET /?key</code> &#x5E94;&#x8F6C;&#x6362;&#x4E3A; <code>URI-Encoding(&quot;key&quot;) + &quot;=&quot; + &quot;&quot;</code></p>
+</blockquote>
+</li>
+<li><p>&#x7528;&#x82F1;&#x6587; <code>&amp;</code> &#x5C06;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x5BF9;&#x8FDE;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x4E32;&#xFF0C;&#x5982; <code>URI-Encoding(Key1) + &quot;=&quot; + URI-Encoding(Value1) + &quot;&amp;&quot; + URI-Encoding(Key2) + &quot;=&quot; + URI-Encoding(Value2)</code></p>
+</li>
+</ul>
+</li>
+<li><p>&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x5934; (CanonicalizedHeaders)</p>
+<ul>
+<li><p>&#x5C06;&#x8BF7;&#x6C42;&#x5934;&#x540D;&#x79F0; (Header Names) &#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199; (lowercase) &#x683C;&#x5F0F;&#xFF0C;&#x5982; <code>X-Qiniu-Date</code> &#x5E94;&#x8F6C;&#x6362;&#x4E3A; <code>x-qiniu-date</code></p>
+</li>
+<li><p>&#x5C06;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x540D;&#x79F0; (Header Names) &#x6309;&#x5B57;&#x6BCD;&#x5E8F;&#x6392;&#x5E8F;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x540C;&#x4E00;&#x8BF7;&#x6C42;&#x5934;&#x540D;&#x79F0; (Header Name) &#x5305;&#x542B;&#x591A;&#x4E2A;&#x503C;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x82F1;&#x6587;&#x9017;&#x53F7; <code>,</code> &#x5C06;&#x591A;&#x4E2A;&#x503C;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x4E32;&#xFF0C;&#x5E76;&#x4E14;&#x79FB;&#x9664;&#x6BCF;&#x4E2A;&#x503C;&#x7684;&#x524D;&#x540E;&#x7A7A;&#x683C;&#xFF0C;&#x5982; <code>x-qiniu-meta-username: Qiniu</code> &#x548C; <code>x-qiniu-meta-username: Transfer</code> &#x5E94;&#x8F6C;&#x6362;&#x4E3A; <code>x-qiniu-meta-username:Qiniu,Transfer</code></p>
+</li>
+<li><p>&#x5728;&#x6BCF;&#x4E2A;&#x89C4;&#x5219;&#x5316;&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x5B57;&#x4E32;&#x540E;&#x9762;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6362;&#x884C;&#x7B26; <code>\n</code> &#x5B57;&#x7B26; (U+000A)</p>
+</li>
+<li><p>&#x5C06;&#x6240;&#x6709;&#x89C4;&#x5219;&#x5316;&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x8FDE;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x4E32;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;: &#x4EE5;&#x4E0B;&#x8BF7;&#x6C42;&#x5934;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x5728;&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x5934;&#x5B57;&#x4E32;&#x4E2D;&#xFF01;</p>
+</blockquote>
+<ul>
+<li><p><code>Host</code>&#xFF0C;&#x8BF7;&#x6C42;&#x57DF;&#x540D;</p>
+</li>
+<li><p><code>Content-Type</code>&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x5934;&#x5305;&#x542B;&#x8BE5;&#x503C;</p>
+</li>
+<li><p><code>X-Qiniu-*</code>&#xFF0C;&#x6240;&#x6709;&#x4EE5; <em>X-Qiniu-</em> &#x5F00;&#x5934;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x8BF7;&#x6C42;&#x5934;</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>&#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x8BF7;&#x6C42;&#x5934;&#x5217;&#x8868; (SignedHeaders)</p>
+<ul>
+<li><p>&#x7528;&#x82F1;&#x6587;&#x5206;&#x53F7; <code>;</code> &#x8FDE;&#x63A5;&#x7684;&#x6240;&#x6709;&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x5934; <em>CanonicalizedHeaders</em> &#x7684;&#x540D;&#x5B57; (Header Names) &#x5217;&#x8868;&#xFF0C;&#x5982; <code>content-type;host;x-qiniu-content-sha256;x-qiniu-date</code></p>
+</li>
+<li><p>&#x8BF7;&#x6C42;&#x5934;&#x540D;&#x5B57;&#x5FC5;&#x987B;&#x4EE5;&#x5B57;&#x6BCD;&#x5E8F;&#x6392;&#x5E8F;</p>
+</li>
+</ul>
+</li>
+<li><p>&#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x7684;&#x8BF7;&#x6C42;&#x4F53; HASH &#x503C; (HashedPayload)</p>
+<ul>
+<li><p>&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x5BF9;&#x8BF7;&#x6C42;&#x4F53;&#x505A;&#x7B7E;&#x540D;&#x8BA4;&#x8BC1;&#xFF0C;&#x8BE5;&#x503C;&#x7684;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;&#x4E3A; <code>Hex(HMAC-SHA256(&lt;Payload Bytes&gt;))</code></p>
+</li>
+<li><p>&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x4E0D;&#x9700;&#x8981;&#x5BF9;&#x8BF7;&#x6C42;&#x4F53;&#x505A;&#x7B7E;&#x540D;&#x8BA4;&#x8BC1;&#xFF0C;&#x8BE5;&#x503C;&#x5E94;&#x4E3A; <code>UNSIGNED-PAYLOAD</code></p>
+</li>
+<li><p>&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x6307;&#x5B9A; <em>Content-Encoding: qws-chunked</em> &#x8BF7;&#x6C42;&#x5934;&#xFF0C;&#x8BE5;&#x503C;&#x56FA;&#x5B9A;&#x4E3A; <code>STREAMING-QWS4-HMAC-SHA256-PAYLOAD</code></p>
+</li>
+</ul>
+</li>
+<li><p>&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x5B57;&#x4E32; (CanonicalizedRequest)</p>
+<blockquote>
+<p>&#x8BF7;&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x683C;&#x5F0F;&#x62FC;&#x63A5;&#x89C4;&#x5219;&#x5316;&#x7B7E;&#x540D;&#x5B57;&#x4E32;&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x4E2D;&#x4E0D;&#x5305;&#x542B;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x5219;&#x7528;&#x7A7A;&#x5B57;&#x4E32; (&quot;&quot;) &#x4EE3;&#x66FF;&#xFF0C;&#x4F46;&#x884C;&#x672B;&#x7684;&#x6362;&#x884C;&#x7B26; (\n) &#x4E0D;&#x80FD;&#x7701;&#x7565;&#xFF01;</p>
+</blockquote>
+<pre><code>  HTTP-Verb + &quot;\n&quot; +
+  CanonicalizedURI + &quot;\n&quot; +
+  CanonicalizedQueryString + &quot;\n&quot; +
+  CanonicalizedHeaders + &quot;\n&quot; +
+  SignedHeaders + &quot;\n&quot; +
+  HashedPayload
+</code></pre></li>
+<li><p>&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x65F6;&#x95F4; (CanonicalizedTimestamp)</p>
+<ul>
+<li>&#x6309;&#x7167; <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">ISO 8601</a> &#x683C;&#x5F0F;&#x5316;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5982; 20060102T150304Z</li>
+</ul>
+</li>
+<li><p>&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x4F5C;&#x7528;&#x57DF; (CanonicalizedScope)</p>
+<ul>
+<li><p>&#x6309;&#x7167; <code>&lt;yyyymmdd&gt; + &quot;/&quot; + &lt;region&gt; + &quot;/&quot; + &lt;service&gt; + &quot;/qws4_request&quot;</code> &#x683C;&#x5F0F;&#x5316;&#x7684;&#x5B57;&#x4E32;</p>
+</li>
+<li><p><code>&lt;yyyymmdd&gt;</code>&#xFF0C;&#x5FC5;&#x987B;&#x4E0E; <em>CanonicalizedTimestamp</em> &#x65E5;&#x671F;&#x4E00;&#x81F4;</p>
+</li>
+<li><p><code>&lt;region&gt;</code>&#xFF0C;&#x8BF7;&#x6C42;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#xFF0C;&#x5982; <em>cn-south-1</em>, <em>cn-north-1</em></p>
+</li>
+<li><p><code>&lt;service&gt;</code>&#xFF0C;&#x8BF7;&#x6C42;&#x5BF9;&#x5E94;&#x7684;&#x670D;&#x52A1;&#x540D;&#x79F0;&#xFF0C;&#x5982; <em>mob</em></p>
+</li>
+</ul>
+</li>
+<li><p>&#x89C4;&#x5219;&#x5316;&#x7B7E;&#x540D;&#x5B57;&#x4E32; (StringToSign)</p>
+<blockquote>
+<p>&#x8BF7;&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x683C;&#x5F0F;&#x62FC;&#x63A5;&#x89C4;&#x5219;&#x5316;&#x7B7E;&#x540D;&#x5B57;&#x4E32;&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x4E2D;&#x4E0D;&#x5305;&#x542B;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x5219;&#x7528;&#x7A7A;&#x5B57;&#x4E32; (&quot;&quot;) &#x4EE3;&#x66FF;&#xFF0C;&#x4F46;&#x884C;&#x672B;&#x7684;&#x6362;&#x884C;&#x7B26; (\n) &#x4E0D;&#x80FD;&#x7701;&#x7565;&#xFF01;</p>
+</blockquote>
+<pre><code>  QWS4-HMAC-SHA256 + &quot;\n&quot; +
+  CanonicalizedTimestamp + &quot;\n&quot; +
+  CanonicalizedScope + &quot;\n&quot; +
+  Hex(HMAC-SHA256(CanonicalizedRequest))
+</code></pre></li>
+<li><p>&#x751F;&#x6210;&#x7B7E;&#x540D;&#x79C1;&#x4E32; (SigningKey)</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;: &#x5FC5;&#x987B;&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x987A;&#x5E8F;&#x751F;&#x6210;&#x7B7E;&#x540D;&#x79C1;&#x4E32;&#xFF0C;&#x5373;&#x540E;&#x9762;&#x7684;&#x7B7E;&#x540D;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x4E0A;&#x4E00;&#x6B65;&#x7B7E;&#x540D;&#x503C;&#xFF01;</p>
+</blockquote>
+<ul>
+<li><p>&#x5BF9; <code>CanonicalizedScope</code> &#x7684;&#x65E5;&#x671F;&#x7B7E;&#x540D;: <code>DateSigningKey = HMAC-SHA256(&quot;QWS4&quot; + &quot;&lt;AccessKeySecret&gt;&quot;, &quot;&lt;yyyymmdd&gt;&quot;)</code></p>
+</li>
+<li><p>&#x5BF9; <code>CanonicalizedScope</code> &#x7684; &lt; region &gt; &#x7B7E;&#x540D;: <code>RegionSigningKey = HMAC-SHA256(DateSigningKey, &quot;&lt;region&gt;&quot;)</code></p>
+</li>
+<li><p>&#x5BF9; <code>CanonicalizedScope</code> &#x7684; &lt; service &gt; &#x7B7E;&#x540D;: <code>ServiceSigningKey = HMAC-SHA256(RegionSigningKey, &quot;&lt;service&gt;&quot;)</code></p>
+</li>
+<li><p>&#x5BF9; <code>CanonicalizedScope</code> &#x7684; &quot;qws4_request&quot; &#x7B7E;&#x540D;: <code>SigningKey = HMAC-SHA256(ServiceSigningKey, &quot;qws4_request&quot;)</code></p>
+</li>
+</ul>
+</li>
+<li><p>&#x751F;&#x6210;&#x7B7E;&#x540D;</p>
+<ul>
+<li>Signature = Hex(HMAC-SHA256(SigningKey, StringToSign))</li>
+</ul>
+</li>
+</ul>
+<h5 id="qws-v4-&#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x793A;&#x4F8B;">QWS V4 &#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x793A;&#x4F8B;</h5>
+<p>&#x5047;&#x8BBE;&#x8BF7;&#x6C42;&#x4F53;&#x4E3A;&#x7A7A;&#xFF0C;&#x5E76;&#x4E14; Access Key Id &#x548C; Access Key Secret &#x5B9A;&#x4E49;&#x5982;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>WeyUtAXps-_5dIDvFWF-rKZ5XyzWf-BmOEI_vNtk</td>
+</tr>
+<tr>
+<td>Secret</td>
+<td>wHKb0KxX0iddrKM35WRbEzCRxOPDq6vqewgla87L</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x8BF7;&#x6C42;</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#x610F;: &#x4E3A;&#x65B9;&#x4FBF;&#x9605;&#x8BFB; <em>Authorization</em> &#x5B57;&#x6BB5;&#x6DFB;&#x52A0;&#x4E86;&#x6362;&#x884C;&#x7B26;&#x548C;&#x7F29;&#x8FDB;&#x683C;&#x5F0F;&#xFF0C;&#x5B9E;&#x9645;&#x8BF7;&#x6C42;&#x4E2D;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x6362;&#x884C;&#x7B26;&#x3002;</p>
+</blockquote>
+<pre><code>GET /transfer/myjobid HTTP/1.1
+Host: api-mix.qiniu.com
+Date: Mon, 02 Jan 2006 15:04:05 GMT
+
+Authorization: QWS4-HMAC-SHA256 Credential=WeyUtAXps-_5dIDvFWF-rKZ5XyzWf-BmOEI_vNtk/20060102/cn-south-1/mix/qws4_request,
+    SignedHeaders=date;host;x-qiniu-content-sha256,
+    Signature=80552f6b3632423fad2db5176badcd627eed2087cbd801cf06d4a9983bd4688d
+X-Qiniu-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+</code></pre><ul>
+<li>&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x5B57;&#x4E32;</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#x610F;: &#x4E3A;&#x65B9;&#x4FBF;&#x9605;&#x8BFB;&#x6362;&#x884C;&#x5904;&#x6DFB;&#x52A0;&#x4E86;&#x6362;&#x884C;&#x7B26;</p>
+</blockquote>
+<pre><code>GET\n
+/transfer/myjobid\n
+\n
+date:Mon, 02 Jan 2006 15:04:05 GMT\n
+host:api-mix.qiniu.com\n
+x-qiniu-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n
+\n
+date;host;x-qiniu-content-sha256\n
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+</code></pre><ul>
+<li>&#x89C4;&#x5219;&#x5316;&#x7B7E;&#x540D;&#x5B57;&#x4E32;</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#x610F;: &#x4E3A;&#x65B9;&#x4FBF;&#x9605;&#x8BFB;&#x6362;&#x884C;&#x5904;&#x6DFB;&#x52A0;&#x4E86;&#x6362;&#x884C;&#x7B26;</p>
+</blockquote>
+<pre><code>WS4-HMAC-SHA256\n
+Mon, 02 Jan 2006 15:04:05 GMT\n
+20130524/cn-south-1/mix/qws4_request\n
+3a5aae01842069b322e956a8c016e723beb9728fbcc3f8ad298cef1686d9876a
+</code></pre><ul>
+<li>&#x7B7E;&#x540D;&#x79C1;&#x4E32;</li>
+</ul>
+<pre><code>[]byte{0x60, 0xe5, 0x48, 0xfd, 0xe8, 0xbb, 0x7b, 0x4d, 0x4d, 0x36, 0x17, 0xd7, 0xa4, 0xbf, 0xb8, 0xcd, 0xa5, 0xa, 0xf4, 0xca, 0x7e, 0xb1, 0xd8, 0xd5, 0x77, 0xf4, 0x52, 0xd4, 0xa4, 0x4e, 0xc3, 0x34}
+</code></pre><ul>
+<li>&#x7B7E;&#x540D;&#x5B57;&#x4E32;</li>
+</ul>
+<pre><code>80552f6b3632423fad2db5176badcd627eed2087cbd801cf06d4a9983bd4688d
+</code></pre><h4 id="&#x8BA4;&#x8BC1;&#x7B7E;&#x540D;-v2">&#x8BA4;&#x8BC1;&#x7B7E;&#x540D; V2</h4>
+<pre><code>CanonicalizedResource = [ &quot;/&quot; ] +
+    &lt;HTTP-Request-URI, from the protocol name up to the query string&gt; +
+    [ subresource, if present. For example &quot;?versioning&quot; and &quot;?location&quot;]
+
+CanonicalizedQwsHeaders = Lowercase(&lt;QwsHeaderName1&gt;) + &quot;:&quot; + TrimSpace(&lt;Value1&gt;) + &quot;\n&quot;
+    Lowercase(&lt;QwsHeaderName2&gt;) + &quot;:&quot; + TrimSpace(&lt;Value2&gt;) + &quot;\n&quot;
+    ...
+    Lowercase(&lt;QwsHeaderNameN&gt;) + &quot;:&quot; + TrimSpace(&lt;ValueN&gt;) + &quot;\n&quot;
+
+StringToSign = HTTP-Verb + &quot;\n&quot; +
+    Content-MD5 + &quot;\n&quot; +
+    Content-Type + &quot;\n&quot; +
+    Date + &quot;\n&quot; +
+    CanonicalizedQwsHeaders +
+    CanonicalizedResource
+
+Signature = Base64(HMAC-SHA1(AccessKeySecret, UTF8-Encoding-Of(StringToSign)))
+
+Authorization = &quot;QWS&quot; + &quot; &quot; + AccessKeyId + &quot;:&quot; + Signature
+</code></pre><h5 id="qws-v2-&#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x7684;&#x89C4;&#x5219;&#x5316;&#x6D41;&#x7A0B;">QWS V2 &#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x7684;&#x89C4;&#x5219;&#x5316;&#x6D41;&#x7A0B;</h5>
+<ul>
+<li><p>&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x8D44;&#x6E90; (CanonicalizedResource)</p>
+<ul>
+<li><p>&#x4EE5;&#x7A7A;&#x5B57;&#x7B26;&#x5F00;&#x59CB; <code>CanonicalizedResource = &quot;&quot;</code></p>
+</li>
+<li><p>&#x5C06;&#x8BF7;&#x6C42;&#x4E2D;&#x7684; <em>HTTP Request-URI</em> &#x6DFB;&#x52A0;&#x5230;&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x4E2D; <code>CanonicalizedResource += &quot;/applicate&quot;</code></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;: &#x5BF9;&#x4E8E;&#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5217;&#x8868; (<em>List Applicates</em>) &#x8BF7;&#x6C42;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0; &quot;/&quot; &#x5230;&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x4E2D; <code>CanonicalizedResource += &quot;/&quot;</code></p>
+</blockquote>
+</li>
+<li><p>&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x4E2D;&#x5305;&#x542B;&#x5B50;&#x8D44;&#x6E90; (sub resource)&#xFF0C;&#x5219;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x5230;&#x89C4;&#x5219;&#x5316;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x4E2D; <code>CanonicalizedResource += &quot;?delete&quot;</code></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;: &#x591A;&#x4E2A;&#x5B50;&#x8D44;&#x6E90;&#x5FC5;&#x987B;&#x6309;&#x7167;&#x8BF7;&#x6C42; <em>Key</em> &#x5B57;&#x6BCD;&#x6392;&#x5E8F;&#x540E;&#x518D;&#x8FDE;&#x63A5;&#xFF0C;&#x5982; <code>CanonicalizedResource += &quot;?uploads&amp;location&quot;</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>&#x89C4;&#x5219;&#x5316; <em>X-Qiniu-*</em> &#x8BF7;&#x6C42;&#x5934; (CanonicalizedQwsHeaders)</p>
+<ul>
+<li><p>&#x5C06;&#x8BF7;&#x6C42;&#x5934;&#x540D;&#x5B57; (Header Names) &#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199; (lowercase) &#x683C;&#x5F0F;&#xFF0C;&#x5982; <code>X-Qiniu-Date</code> &#x5E94;&#x8F6C;&#x6362;&#x4E3A; <code>x-qiniu-date</code></p>
+</li>
+<li><p>&#x5C06;&#x8BF7;&#x6C42;&#x5934; (Header Names) &#x540D;&#x5B57;&#x6309;&#x5B57;&#x6BCD;&#x5E8F;&#x6392;&#x5E8F;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x540C;&#x4E00;&#x8BF7;&#x6C42;&#x5934;&#x540D;&#x5B57; (Header Name) &#x5305;&#x542B;&#x591A;&#x4E2A;&#x503C;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x82F1;&#x6587;&#x9017;&#x53F7; , &#x5C06;&#x591A;&#x4E2A;&#x503C;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x4E32;&#xFF0C;&#x5E76;&#x4E14;&#x79FB;&#x9664;&#x503C;&#x7684;&#x524D;&#x540E;&#x7A7A;&#x683C;&#xFF0C;&#x5982; <code>x-qiniu-meta-username: Qiniu</code> &#x548C; <code>x-qiniu-meta-username: Transfer</code> &#x5E94;&#x8F6C;&#x6362;&#x4E3A; <code>x-qiniu-meta-username:Qiniu,Transfer</code></p>
+</li>
+<li><p>&#x5728;&#x6BCF;&#x4E2A;&#x89C4;&#x5219;&#x5316;&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x5B57;&#x4E32;&#x540E;&#x9762;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6362;&#x884C;&#x7B26; <code>\n</code> &#x5B57;&#x7B26; (U+000A)</p>
+</li>
+<li><p>&#x5C06;&#x6240;&#x6709;&#x89C4;&#x5219;&#x5316;&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x8FDE;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x4E32;</p>
+</li>
+</ul>
+</li>
+<li><p>&#x89C4;&#x5219;&#x5316;&#x7B7E;&#x540D;&#x5B57;&#x4E32; (StringToSign)</p>
+<blockquote>
+<p>&#x8BF7;&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x683C;&#x5F0F;&#x62FC;&#x63A5;&#x89C4;&#x5219;&#x5316;&#x7B7E;&#x540D;&#x5B57;&#x4E32;&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x4E2D;&#x4E0D;&#x5305;&#x542B;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x5219;&#x7528;&#x7A7A;&#x5B57;&#x4E32; (&quot;&quot;) &#x4EE3;&#x66FF;&#xFF0C;&#x4F46;&#x884C;&#x672B;&#x7684;&#x6362;&#x884C;&#x7B26; (\n) &#x4E0D;&#x80FD;&#x7701;&#x7565;&#xFF01;</p>
+</blockquote>
+<pre><code>  HTTP-Verb + &quot;\n&quot; +
+  Content-MD5 + &quot;\n&quot; +
+  Content-Type + &quot;\n&quot; +
+  Date + &quot;\n&quot; +
+  CanonicalizedQwsHeaders +
+  CanonicalizedResource
+</code></pre><ul>
+<li><code>Content-MD5</code> &#x503C;&#x4EC5;&#x8BA1;&#x7B97;&#x8BF7;&#x6C42;&#x4F53;</li>
+</ul>
+</li>
+<li><p>&#x751F;&#x6210;&#x7B7E;&#x540D;</p>
+<ul>
+<li>Signature = Base64(HMAC-SHA1(AccessKeySecret, StringToSign))</li>
+</ul>
+</li>
+</ul>
+<h5 id="qws-v2-&#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x793A;&#x4F8B;">QWS V2 &#x8BA4;&#x8BC1;&#x7B7E;&#x540D;&#x793A;&#x4F8B;</h5>
+<p>&#x5047;&#x8BBE;&#x8BF7;&#x6C42;&#x4F53;&#x4E3A;&#x7A7A;&#xFF0C;&#x5E76;&#x4E14; Access Key Id &#x548C; Access Key Secret &#x5B9A;&#x4E49;&#x5982;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>WeyUtAXps-_5dIDvFWF-rKZ5XyzWf-BmOEI_vNtk</td>
+</tr>
+<tr>
+<td>Secret</td>
+<td>wHKb0KxX0iddrKM35WRbEzCRxOPDq6vqewgla87L</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x8BF7;&#x6C42;</li>
+</ul>
+<pre><code>GET /transfer/myjobid HTTP/1.1
+Host: api-mix.qiniu.com
+Date: Mon, 02 Jan 2006 15:04:05 GMT
+
+Authorization: QWS WeyUtAXps-_5dIDvFWF-rKZ5XyzWf-BmOEI_vNtk:4+SXv0N2piq2S5vjEifeq7125L8=
+</code></pre><ul>
+<li>&#x89C4;&#x5219;&#x5316;&#x7B7E;&#x540D;&#x5B57;&#x4E32;</li>
+</ul>
+<pre><code>GET\n
+\n
+\n
+Mon, 02 Jan 2006 15:04:05 GMT\n
+/transfer/myjobid
+</code></pre><ul>
+<li>&#x7B7E;&#x540D;&#x5B57;&#x4E32;</li>
+</ul>
+<pre><code>4+SXv0N2piq2S5vjEifeq7125L8=
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./response.html" class="navigation navigation-prev " aria-label="Previous page: 响应头"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./auth_header.html" class="navigation navigation-next " aria-label="Next page: Header 认证"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
