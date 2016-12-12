@@ -21,7 +21,7 @@ QWS V4 请求头认证信息格式定义如下:
 字段名称 | 描述
 ------- | ----
 QWS4-HMAC-SHA256 | *QWS4* 声明请求使用 QWS V4 认证签名；*HMAC-SHA256* 声明认证签名算法为 HMAC-SHA256
-Credential | 格式定义 `<AccessKeyId>/<yyyyMMdd>/<region>/<service>/qws4_request`，如 *WeyUtAXps-_5dIDvFWF-rKZ5XyzWf-BmOEI_vNtk/20060102/cn-south-1/mix/qws4_request*
+Credential | 格式定义 `<AccessKeyId>/<yyyyMMdd>/<zone>/<service>/qws4_request`，如 *WeyUtAXps-_5dIDvFWF-rKZ5XyzWf-BmOEI_vNtk/20060102/cn-south-1/mix/qws4_request*
 SignedHeaders | 用以生成认证签名的 HTTP 请求头名称列表，请求头名字必须是按字母序排序的小写格式，并且名字前后不能包含空格，多个名字使用英文分号 `;` 分割，如 `host;x-qiniu-date`
 Signature | 请求认证签名的 64 位十六进制字串
 

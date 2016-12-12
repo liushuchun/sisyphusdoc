@@ -1,4 +1,4 @@
- ### 分块传输认证 (HTTP Chunked Transfer)
+### 分块传输认证 (HTTP Chunked Transfer)
 
 分块传输认证仅针对 [新建对象](object_put.md) 过程中的 [分块传输模式](object_put_chunked.md) 有效，且只支持 QWS V4 认证方式。
 
@@ -48,7 +48,7 @@
 
     CanonicalizedTimestamp = ISO8601(...)
 
-    CanonicalizedScope = <yyyymmdd>/<region>/<service>/qws4_request
+    CanonicalizedScope = <yyyymmdd>/<zone>/<service>/qws4_request
 
     StringToSign = QWS4-HMAC-SHA256 + "\n" +
         CanonicalizedTimestamp + "\n" +
@@ -56,7 +56,7 @@
         Hex(HMAC-SHA256(CanonicalizedRequest))
 
     SigningKey = HMAC-SHA256("QWS4" + "<AccessKeySecret>", "<yyyymmdd>")
-    SigningKey = HMAC-SHA256(SigningKey, "<region>")
+    SigningKey = HMAC-SHA256(SigningKey, "<zone>")
     SigningKey = HMAC-SHA256(SigningKey, "<service>")
     SigningKey = HMAC-SHA256(SigningKey, "qws4_request")
 
@@ -73,7 +73,7 @@
 
     CanonicalizedTimestamp = ISO8601(...)
 
-    CanonicalizedScope = <yyyymmdd>/<region>/<service>/qws4_request
+    CanonicalizedScope = <yyyymmdd>/<zone>/<service>/qws4_request
 
     ChunkHashSeed = <Signature>
 
@@ -85,7 +85,7 @@
         Hex(HMAC-SHA256(CurrentChunkBytes))
 
     SigningKey = HMAC-SHA256("QWS4" + "<AccessKeySecret>", "<yyyymmdd>")
-    SigningKey = HMAC-SHA256(SigningKey, "<region>")
+    SigningKey = HMAC-SHA256(SigningKey, "<zone>")
     SigningKey = HMAC-SHA256(SigningKey, "<service>")
     SigningKey = HMAC-SHA256(SigningKey, "qws4_request")
 

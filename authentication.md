@@ -40,7 +40,7 @@ Qiniu MIX Service 服务同时支持 QWS V4 和 QWS V2 请求签名认证，推�
 
     CanonicalizedTimestamp = ISO8601(...)
 
-    CanonicalizedScope = <yyyymmdd>/<region>/<service>/qws4_request
+    CanonicalizedScope = <yyyymmdd>/<zone>/<service>/qws4_request
 
     StringToSign = QWS4-HMAC-SHA256 + "\n" +
         CanonicalizedTimestamp + "\n" +
@@ -48,7 +48,7 @@ Qiniu MIX Service 服务同时支持 QWS V4 和 QWS V2 请求签名认证，推�
         Hex(HMAC-SHA256(CanonicalizedRequest))
 
     SigningKey = HMAC-SHA256("QWS4" + "<AccessKeySecret>", "<yyyymmdd>")
-    SigningKey = HMAC-SHA256(SigningKey, "<region>")
+    SigningKey = HMAC-SHA256(SigningKey, "<zone>")
     SigningKey = HMAC-SHA256(SigningKey, "<service>")
     SigningKey = HMAC-SHA256(SigningKey, "qws4_request")
 
@@ -134,11 +134,11 @@ Qiniu MIX Service 服务同时支持 QWS V4 和 QWS V2 请求签名认证，推�
 
 - 规则化请求作用域 (CanonicalizedScope)
 
-    - 按照 `<yyyymmdd> + "/" + <region> + "/" + <service> + "/qws4_request"` 格式化的字串
+    - 按照 `<yyyymmdd> + "/" + <zone> + "/" + <service> + "/qws4_request"` 格式化的字串
 
     - `<yyyymmdd>`，必须与 *CanonicalizedTimestamp* 日期一致
 
-    - `<region>`，请求对应的数据中心，如 *cn-south-1*, *cn-north-1*
+    - `<zone>`，请求对应的数据中心，如 *cn-south-1*, *cn-north-1*
 
     - `<service>`，请求对应的服务名称，如 *mob*
 
@@ -159,9 +159,9 @@ Qiniu MIX Service 服务同时支持 QWS V4 和 QWS V2 请求签名认证，推�
 
     - 对 `CanonicalizedScope` 的日期签名: `DateSigningKey = HMAC-SHA256("QWS4" + "<AccessKeySecret>", "<yyyymmdd>")`
 
-    - 对 `CanonicalizedScope` 的 < region > 签名: `RegionSigningKey = HMAC-SHA256(DateSigningKey, "<region>")`
+    - 对 `CanonicalizedScope` 的 < zone > 签名: `ZoneSigningKey = HMAC-SHA256(DateSigningKey, "<zone>")`
 
-    - 对 `CanonicalizedScope` 的 < service > 签名: `ServiceSigningKey = HMAC-SHA256(RegionSigningKey, "<service>")`
+    - 对 `CanonicalizedScope` 的 < service > 签名: `ServiceSigningKey = HMAC-SHA256(ZoneSigningKey, "<service>")`
 
     - 对 `CanonicalizedScope` 的 "qws4_request" 签名: `SigningKey = HMAC-SHA256(ServiceSigningKey, "qws4_request")`
 

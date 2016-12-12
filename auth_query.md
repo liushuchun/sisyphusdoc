@@ -21,7 +21,7 @@
 参数名称 | 描述
 ------- | ----
 X-Qiniu-Algorithm | 声明认证签名使用的算法，该值必须为 `QWS4-HMAC-SHA256`
-X-Qiniu-Credential | 格式定义 `<AccessKeyId>/<yyyyMMdd>/<region>/<service>/qws4_request`，如 *WeyUtAXps-_5dIDvFWF-rKZ5XyzWf-BmOEI_vNtk/20060102/cn-south-1/mix/qws4_request*
+X-Qiniu-Credential | 格式定义 `<AccessKeyId>/<yyyyMMdd>/<zone>/<service>/qws4_request`，如 *WeyUtAXps-_5dIDvFWF-rKZ5XyzWf-BmOEI_vNtk/20060102/cn-south-1/mix/qws4_request*
 X-Qiniu-Date | 按照 ISO 8601 格式的请求时间，如 20060102T150304Z
 X-Qiniu-Expires | 声明资源的有效期，单位为秒 (second)；该值最大为 7 天，即 604800 秒。
 X-Qiniu-SignedHeaders | 用以生成认证签名的请求头名字列表，按字母序排序，多个名字使用英文分号 `;` 分割。

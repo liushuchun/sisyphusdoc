@@ -53,7 +53,7 @@
         data-chapter-title="新建迁移 (PUT Transfer)"
         data-filepath="transfer_put.md"
         data-basepath="."
-        data-revision="Wed Sep 14 2016 10:32:45 GMT+0800 (CST)"
+        data-revision="Thu Dec 08 2016 18:00:14 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -948,6 +948,7 @@ Authorization: &lt;AuthenticationString&gt;
     <span class="hljs-string">&quot;name&quot;</span>: string,
     <span class="hljs-string">&quot;desc&quot;</span>: string,
     <span class="hljs-string">&quot;spec&quot;</span>: {
+        <span class="hljs-string">&quot;is_sync&quot;</span>:boolean,
         <span class="hljs-string">&quot;options&quot;</span>: {
             <span class="hljs-string">&quot;overwrite_existing&quot;</span>: boolean,
             <span class="hljs-string">&quot;delete_source&quot;</span>: boolean
@@ -1046,8 +1047,8 @@ Authorization: &lt;AuthenticationString&gt;
 </tr>
 </tbody>
 </table>
-<p>spec.source.config.zone:
-&#x6570;&#x636E;&#x6E90;&#x7C7B;&#x578B; | &#x533A;&#x57DF;&#x7F16;&#x53F7; | &#x533A;&#x57DF;&#x503C; | &#x6240;&#x5BF9;&#x5E94;region
+<p>spec.source.config.zone:</p>
+<p>&#x6570;&#x636E;&#x6E90;&#x7C7B;&#x578B; | &#x533A;&#x57DF;&#x7F16;&#x53F7; | &#x533A;&#x57DF;&#x503C; | &#x6240;&#x5BF9;&#x5E94;zone
 qiniu    | 0       | &#x534E;&#x4E1C; |
 qiniu    | 1       | &#x534E;&#x5317; |
 qiniu    | 2       | &#x534E;&#x5357; | 

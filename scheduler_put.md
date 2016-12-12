@@ -41,7 +41,7 @@
         "max_worker": integer,
         "stats_interval": integer
     }
-    "region": enum(RegionType)
+    "zone": enum(ZoneType)
 }
 ```
 

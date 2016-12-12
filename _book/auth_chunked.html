@@ -53,7 +53,7 @@
         data-chapter-title="Chunked 认证"
         data-filepath="auth_chunked.md"
         data-basepath="."
-        data-revision="Wed Sep 14 2016 10:32:45 GMT+0800 (CST)"
+        data-revision="Thu Dec 08 2016 18:00:14 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -969,7 +969,7 @@ CanonicalizedRequest = HTTP-Verb + &quot;\n&quot; +
 
 CanonicalizedTimestamp = ISO8601(...)
 
-CanonicalizedScope = &lt;yyyymmdd&gt;/&lt;region&gt;/&lt;service&gt;/qws4_request
+CanonicalizedScope = &lt;yyyymmdd&gt;/&lt;zone&gt;/&lt;service&gt;/qws4_request
 
 StringToSign = QWS4-HMAC-SHA256 + &quot;\n&quot; +
     CanonicalizedTimestamp + &quot;\n&quot; +
@@ -977,7 +977,7 @@ StringToSign = QWS4-HMAC-SHA256 + &quot;\n&quot; +
     Hex(HMAC-SHA256(CanonicalizedRequest))
 
 SigningKey = HMAC-SHA256(&quot;QWS4&quot; + &quot;&lt;AccessKeySecret&gt;&quot;, &quot;&lt;yyyymmdd&gt;&quot;)
-SigningKey = HMAC-SHA256(SigningKey, &quot;&lt;region&gt;&quot;)
+SigningKey = HMAC-SHA256(SigningKey, &quot;&lt;zone&gt;&quot;)
 SigningKey = HMAC-SHA256(SigningKey, &quot;&lt;service&gt;&quot;)
 SigningKey = HMAC-SHA256(SigningKey, &quot;qws4_request&quot;)
 
@@ -993,7 +993,7 @@ Authorization = &quot;QWS4-HMAC-SHA256&quot; + &quot; &quot; +
 </blockquote>
 <pre><code>CanonicalizedTimestamp = ISO8601(...)
 
-CanonicalizedScope = &lt;yyyymmdd&gt;/&lt;region&gt;/&lt;service&gt;/qws4_request
+CanonicalizedScope = &lt;yyyymmdd&gt;/&lt;zone&gt;/&lt;service&gt;/qws4_request
 
 ChunkHashSeed = &lt;Signature&gt;
 
@@ -1005,7 +1005,7 @@ StringToSign = QWS4-HMAC-SHA256-PAYLOAD + &quot;\n&quot; +
     Hex(HMAC-SHA256(CurrentChunkBytes))
 
 SigningKey = HMAC-SHA256(&quot;QWS4&quot; + &quot;&lt;AccessKeySecret&gt;&quot;, &quot;&lt;yyyymmdd&gt;&quot;)
-SigningKey = HMAC-SHA256(SigningKey, &quot;&lt;region&gt;&quot;)
+SigningKey = HMAC-SHA256(SigningKey, &quot;&lt;zone&gt;&quot;)
 SigningKey = HMAC-SHA256(SigningKey, &quot;&lt;service&gt;&quot;)
 SigningKey = HMAC-SHA256(SigningKey, &quot;qws4_request&quot;)
 

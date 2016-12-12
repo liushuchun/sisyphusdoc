@@ -96,9 +96,9 @@ application.json
             "rs": {
                 "rs_host": "http://rs.qbox.me",
                 "rsf_host": "http://rsf.qbox.me",
-                "up_region": "cn-south-1",
+                "up_zone": "cn-south-1",
                 "up_host": "http://upload.qiniu.com",
-                "up_regions": {
+                "up_zones": {
                     "cn-south-1": "https://up-z0.qbox.me",
                     "cn-north-1": "https://up-z1.qbox.me"
                 }
@@ -167,9 +167,9 @@ application.json
             "rs": {
                 "rs_host": "",
                 "rsf_host": "",
-                "up_region": "",
+                "up_zone": "",
                 "up_host": "",
-                "up_regions": {
+                "up_zones": {
 
                 }
             },
@@ -231,9 +231,9 @@ application.json
             "rs": {
                 "rs_host": "",
                 "rsf_host": "",
-                "up_region": "",
+                "up_zone": "",
                 "up_host": "",
-                "up_regions": {
+                "up_zones": {
 
                 }
             },
@@ -293,7 +293,7 @@ cd _package
                 "max_worker": 20,
                 "stats_interval": 20
             },
-            "region":"default"
+            "zone":"default"
              },
              "nsq":{
                 "host":"127.0.0.1",
@@ -336,9 +336,9 @@ cd _package
             "rs": {
                 "rs_host": "http://rs.qbox.me",
                 "rsf_host": "http://rsf.qbox.me",
-                "up_region": "cn-south-1",
+                "up_zone": "cn-south-1",
                 "up_host": "http://upload.qiniu.com",
-                "up_regions": {
+                "up_zones": {
                     "cn-south-1": "https://up-z0.qbox.me",
                     "cn-north-1": "https://up-z1.qbox.me"
                 }
@@ -385,7 +385,7 @@ cd _package
                 "max_worker": 20,
                 "stats_interval": 20
             },
-            "region":"default"
+            "zone":"default"
              },
              "nsq":{
                 "host":"172.30.250.167",
@@ -435,9 +435,9 @@ cd _package
             "rs": {
                 "rs_host": "",
                 "rsf_host": "",
-                "up_region": "",
+                "up_zone": "",
                 "up_host": "",
-                "up_regions": {
+                "up_zones": {
 
                 }
             },
@@ -475,7 +475,7 @@ cd _package
                 "max_worker": 20,
                 "stats_interval": 20
             },
-            "region":"default"
+            "zone":"default"
              },
              "nsq":{
                 "host":"172.30.250.167",
@@ -527,9 +527,9 @@ cd _package
             "rs": {
                 "rs_host": "",
                 "rsf_host": "",
-                "up_region": "",
+                "up_zone": "",
                 "up_host": "",
-                "up_regions": {
+                "up_zones": {
 
                 }
             },

@@ -8,7 +8,7 @@ const AWS = require('aws-sdk'),
 // config for qiniu s3 api service globally
 AWS.config.update({
     endpoint: 'https://api-s3.qiniu.com',
-    region: 'cn-south-1'
+    zone: 'cn-south-1'
 });
 
 // init s3 client

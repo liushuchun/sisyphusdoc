@@ -25,6 +25,7 @@
     "name": string,
     "desc": string,
     "spec": {
+        "is_sync":boolean,
         "options": {
             "overwrite_existing": boolean,
             "delete_source": boolean
@@ -104,7 +105,8 @@ spec.source.type:
  url    | 静态链接
 
 spec.source.config.zone:
-数据源类型 | 区域编号 | 区域值 | 所对应region
+
+数据源类型 | 区域编号 | 区域值 | 所对应zone
 qiniu    | 0       | 华东 |
 qiniu    | 1       | 华北 |
 qiniu    | 2       | 华南 | 
